@@ -1,0 +1,299 @@
+%====================================================
+% Proceedings Template (ENG)
+% The 17th National Science Research Conference (SRC17)
+% Faculty of Science, Srinakharinwirot University
+%====================================================
+
+\documentclass[12pt, a4paper]{article}
+
+\usepackage{geometry,graphicx}
+\usepackage{amssymb, amsmath, amsthm}
+\usepackage{fancyhdr}
+\usepackage{newtxtext,newtxmath}
+\usepackage{tikz}
+%\usepackage[hang,flushmargin]{footmisc}
+\geometry{top=3.81cm, bottom=3.81cm, left=2.54cm, right=2.54cm, headheight=3cm, headsep = 1cm}
+
+\renewcommand{\thefootnote}{\fnsymbol{footnote}}
+\usepackage[T1]{fontenc}
+
+%%%References
+\usepackage{etoolbox}
+\apptocmd{\thebibliography}{\setlength{\itemsep}{0pt}}{}{}
+\usepackage{cite}
+\usepackage{enumitem}
+
+%%
+\newcommand\blfootnote[1]{\let\thefootnote\relax\footnotetext{\ignorespaces #1}}
+\addtolength{\footnotesep}{1pt}
+
+\newenvironment{SRC-abstract}[5][]{
+  \begin{centering}
+    {\renewcommand\textsuperscript[1]{}\par}
+    \vspace*{0.5cm}
+    {\linespread{1.241}\selectfont {\Large\bfseries #2}\par}
+    \bigskip
+    {#3\par}
+    \bigskip
+    {\small #5\par}
+    \medskip
+    {\small \corresponding Corresponding author email: #4\par}
+    \bigskip\bigskip
+    {{\large\bfseries Abstract}\par}
+    \bigskip
+\end{centering}
+}{ 
+%  \bigskip
+%  \hrule
+  \bigskip
+}
+
+\renewcommand{\headrulewidth}{0pt}
+
+\newcommand{\mykeywords}[1]{%
+    \noindent \textbf{Keywords:} #1 \par
+}
+
+\newcommand{\speaker}[1]{}
+\newcommand{\corresponding}{\textsuperscript{*}}
+
+\pagestyle{fancy}
+\fancyhead[L]{\footnotesize
+The 17\textsuperscript{th} National Science Research Conference (SRC17)\\
+Faculty of Science, Srinakharinwirot University}
+\fancyfoot[C]{\thepage}
+\fancyhead[R]{\footnotesize SRC17 LaTeX Template 28-01-26 \\}
+
+%%%%%%% Use AMSLaTeX Theorem Style %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{question}[theorem]{Question}
+\newtheorem{problem}[theorem]{Problem}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+
+\numberwithin{equation}{section}
+
+%%%%%%%%%%%%%%% DO NOT make any changes above %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+
+%%%%%%%%%%%%% PLEASE CUSTOMIZE  BELOW  %%%%%%%%%%%%%%%%%%%%%%%
+%
+%------------  Insert any required packages and definitions here --------------
+% \usepackage{xxx}
+
+\newcommand{\myvec}[1]{\mathbf{#1}}
+%%%%%%
+
+%=======   END OF CUSTOMIZATION  ===========
+
+%%%Color links
+\usepackage[hyperfootnotes=false]{hyperref}
+\hypersetup{
+    colorlinks=true, 
+    linkcolor=blue,
+    citecolor=blue,
+    filecolor=blue,
+    urlcolor=blue,
+}
+\renewcommand{\UrlFont}{}
+
+\begin{document}
+
+%\pagestyle{empty}
+\setcounter{section}{0}
+
+%%%%%%%%%%%%%%%%%%%%%  START YOUR DOCUMENT HERE %%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%% ABSTRACT %%%%%%%%%%%%%%%%%%%%
+% Use the following command to write your abstract:
+%
+% \begin{SRC-abstract}[OXXX99]
+% {Title} Use APA7 formatting (capitalize major words)
+% {Authors (use \textsuperscript as institution markers, 
+%                 use \speaker{Author Name} to indicate each speaker,
+%                 and use \corresponding to indicate the corresponding author by putting it AFTER the name)}
+% {Corresponding author email}
+% {Institutions (use \textsuperscript as institution markers)}
+% Abstract text
+% \end{SRC-abstract}
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{SRC-abstract}[AAA999] %%Do not make any change to the placeholder presentation code.
+{Your Title Goes Here} %TITLE
+{First Author\textsuperscript{1}, 
+Second Author\textsuperscript{1},
+and Third Author\textsuperscript{2,}\corresponding
+} %AUTHORS
+{corresponding@email.com
+} %CORRESPONDING AUTHOR's EMAIL
+{\textsuperscript{1}Department of Mathematics, Faculty of Science, Srinakharinwirot University, Bangkok, 10110\\ \smallskip
+\textsuperscript{2}Department of Biology, Faculty of Science, Nareasuan University, Phitsanulok, 65000
+} %AFFILIATIONS
+
+%YOUR ABSTRACT GOES HERE
+Write a concise and compelling abstract of no more than 250 words. Your abstract should pique the reader's interest and provide a clear overview of your research.
+To achieve this, structure your abstract as follows:
+
+1) Background: Briefly introduce the broader context of your research and clearly state the specific research question or problem you address.
+ 
+2) Method: Outline the primary methods or techniques used to investigate your research question.
+ 
+3) Result: Summarize the key findings of your study.
+ 
+4) Conclusion: Present the main conclusions or interpretations drawn from your results.
+ 
+Your abstract should accurately reflect the content of your full paper. Avoid making exaggerated claims or introducing results that will not be presented at the conference.
+\end{SRC-abstract}
+
+%%%%%%%%%%%%%%%%% Keywords %%%%%%%%%%%%%%%%%%%%%%
+
+\mykeywords{keyword1, keyword2, keyword3} %Please include 3-5 keywords here. Use comma to separate items in the list.
+\clearpage
+
+%%%%%%%%%%%%%%%%%%% Main Text %%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Introduction}\label{yourname:intro}
+The introduction provides background on the research topic, establishes its significance, and outlines the study's objectives. It should review relevant literature, identify gaps or unresolved issues, and clearly state the research question or hypothesis, setting the stage for the study's contribution to the field.
+
+\subsection{Citations and Reference Format}
+Use the \LaTeX\ automatism for your citations. Please ensure that every reference given in the reference list must also be cited in the text. Use Vancouver style for references. 
+Use numbers in square brackets for in-text citations as in the following paragraph. Number the references in the order in which they appear in the text. Please see the guide for authors and the source file for examples. For more information, please see \url{https://lib.swu.ac.th/wp-content/uploads/2025/04/bibliographic-manual-3-VancouverSWU_Citation-260121.pdf}.
+
+Many authors have studied star-shaped regions \cite{yourname:book, yourname:bookchapter}. For example, Theerakarn  \cite{yourname:article} showed that the graph of a polar equation that has the origin as the center of
+length always has at least one cusp or corner unless it is centrally symmetric.
+
+\subsection{Equations}
+You may use inline equations, $y^{\prime}+4y^2=0$, or displayed equations
+\[
+	\vec{a}\times\vec{b} = \vec{c}+\sum_{i=1}^n C_i.
+\]
+Equations will be labeled by section with equation numbers located on the right. For example,
+\begin{equation}\label{yourname:eq15}
+	h =T \left ( \sum_{i=1}^n x_i \otimes y_i \right ).
+\end{equation}
+Please note that all internal labels and all cites should be prefixed by the author's last name as follows.
+\begin{verbatim}
+YourName:ref
+\end{verbatim}
+For example, if your last name is ``Peters,''  a label should be as follows.
+\begin{verbatim}
+\label{peters:eq15}
+\end{verbatim}
+
+\subsection{Theorem Style}
+Use the \LaTeX\ automatism for cross-references. For example, see Section \ref{yourname:intro_I} and equation (\ref{yourname:eq15}). Use AMSLaTeX theorem style for definitions, theorems, lemmas, etc. 
+
+\begin{definition}
+Let $A \subseteq \mathbb{R}^n$ be a convex set. A point $x \in A$ is called an \emph{extreme point} if $\dots$
+\end{definition}
+
+\begin{theorem}
+	Theorem text goes here.
+\end{theorem}
+\begin{proof}
+   The proof is left as an exercise for the reader.
+\end{proof}
+
+\begin{lemma}
+	Lemma text goes here.
+\end{lemma}
+
+\subsection{Figures and Tables}
+
+Use floats for your figures and tables. Put figure files in the same folder as the TeX source file. Submit every file together as a single \verb|.zip| file.
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=7cm]{src17_logo.png}
+\caption{SRC17 logo}
+\label{yourname:ammlogo}
+\end{figure}
+
+\begin{table}[h]
+\caption{SRC hosts}
+\begin{center}
+\begin{tabular}{clc}  \hline
+SRC & Host & Year\\ \hline\hline
+ $17^{th}$ & SWU &$2026$ \\ 
+$16^{th}$ & MSU &$2025$ \\ 
+$15^{th}$ & BUU &$2024$ \\ 
+$14^{th}$ & UP &$2023$ \\ 	 
+\hline
+\end{tabular}
+\label{yourname:tableofamm}
+\end{center}
+\end{table}
+
+\section{Materials and Methods}\label{yourname:methods}
+This part should provide a comprehensive description of the methodology. For established or previously published methods, please include the appropriate citations.
+
+\subsection{Subsection Heading}\label{yourname:intro_I}
+Separate text sections with the standard \LaTeX\ sectioning commands.
+
+\subsubsection{Subsubsection Heading}
+Your text goes here.
+
+\section{Results}
+Provide a clear and concise presentation of the results. This section must detail all significant findings without unnecessary elaboration.
+
+\section{Conclusion and Discussion}
+The conclusion should explore the significance of the results of the work. Avoid extensive citations and discussion of published literature. The discussion interprets the findings, connects them to existing research, and highlights their significance for the field. It should also acknowledge the study's limitations and propose directions for future research, emphasizing the broader impact of the results.
+
+\section*{Acknowledgements}
+Acknowledgments of people, grants, funds, etc., should be included here. Funding agencies or scholarships should be named in full.
+
+\begin{thebibliography}{99}
+
+%%% Book
+\bibitem{yourname:book}
+Gopal D, Kumam P, Abbas M. Background and recent developments of metric fixed point theory. New York: Taylor \& Francis Group LLC; 2017.
+
+%%% Book Chapter
+\bibitem{yourname:bookchapter}
+Dorko A. What do we know about student learning from online mathematics homework? In: Howard JP II, Beyes JF, editors. Teaching and learning mathematics online. Boca Raton: C\&H/CRC Press; 2020. p. 17--42.
+
+%%% Journal article
+\bibitem{yourname:article} 
+Theerakarn T. On the center of surface area of the boundary of a star-shaped region. College Math J. 2023;54(3):326--36.
+
+%%% Multiple authors : less than 7
+\bibitem{yourname:multiple} 
+Isariyapalakul S, Pho-on W, Khemmani V. The true twin classes-based investigation for connected local dimensions of connected graphs. AIMS Math. 2024;9(4):9435--46.
+
+%%% Multiple authors : 7 or more
+\bibitem{yourname:seven} 
+Weikert S, Freyer D, Weih M, Isaev N, Busch C, Schultze J, et al. Rapid $Ca^{2+}$-dependent NO-production from central nervous system cells in culture measured by NO-nitrite/ozone chemoluminescence. Brain Res. 1997;748:1--11.
+
+%%% Article in other language
+\bibitem{yourname:lang} 
+Sirisomboonwech K, Lekjaroensri C, Rerkruthairat N, Insakul S. Hog dice game with additional rules. Math J Math Assoc Thai. 2023;68(709):1--18. Thai.
+
+%%% Article in Conference Proceedings
+\bibitem{yourname:proceedings}
+Chaddock TE. Gastric emptying of a nutritionally balanced liquid diet. In: Daniel EE, editor. Proceedings of the Fourth International Symposium on Gastrointestinal Motility, ISGM4; 1973 Sep 4--8; Seattle, WA. Vancouver: Mitchell Press; 1974. p. 83--92.
+
+%%% Website
+\bibitem{yourname:website} 
+Cancer Research UK. Cancer statistics reports for the UK [Internet]. 2003 [cited 2003 Mar 13]. Available from: \url{http://www.cancerresearchuk.org/aboutcancer/statistics/cancerstatsreport/}
+
+%%% Translated Book
+\bibitem{yourname:translated} 
+Luria AR. The mind of a mnemonist. Solotarof L, translator. New York: Avon Books; 1969.
+
+%%% Thesis
+\bibitem{yourname:thesis} 
+Pho-on W. Gromov boundaries of complexes associated to surfaces [dissertation]. University of Illinois at Urbana-Champaign; 2017.
+
+\end{thebibliography}
+
+
+\end{document}
